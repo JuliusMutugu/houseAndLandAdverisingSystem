@@ -1,0 +1,10 @@
+{%extends 'HouseAdvertising/main.html'%}
+{%block content%}
+<div class= "items">
+    <h2 style="color:blue;text-decoration:None;"> user profile </h2><hr/>
+    <h4> Username: {{singleAgent.username}} </h4>
+    <h4> Phone number : {{singleAgent.phoneNumber}} </h4>
+    <h4> Social media link: {{singleAgent.social_link}} </h4>
+    <h4> Username: {{singleAgent.national_id}} </h4>
+    <img src= {{singleAgent.agentImage.url}} width=400px, height= 300px />
+{%endblock%}

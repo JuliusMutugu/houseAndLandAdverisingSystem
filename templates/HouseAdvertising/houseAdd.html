@@ -1,0 +1,28 @@
+{%extends "HouseAdvertising/main.html"%}
+
+{%block content%}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2 style="color:red;text-align:center;" >House advertisement Form! </h2>
+    <label for="property_name"> property_name</label>
+    <input type = "text" required name="name" height="200px"/> <br/>
+    <label for="property_type"> property_type</label>
+    <select name="category" id = "category">
+        <option value="houserentals" >houserentals</option>
+        <option value="housesale" >housesale</option>
+        
+    </select><br/>
+    <label for="property_size"> property_size</label>
+    <input type = "number" required name="size" height= "50%" width= "300px"/><br/> 
+    <label for="location"> Location</label>
+    <input type="text" required name='location' height="300px"/> <br/>
+    <label for="price"> Price</label>
+    <input type = "number" required name="price"/> <br/>
+    <label for="bed_rooms"> Bed_rooms</label>
+    <input type = "number" required name="bed_rooms"/><br/>
+    <label for =more> property details </label>
+    <input type = "text" name="more" placeholder="house description" id= "more" multiple=True/><br/>
+    <input type="file" name = "image_prop" required> <br/> <br/>
+    <input type="submit" value = "Submit" height="300px"/>
+</form>
+{%endblock%}

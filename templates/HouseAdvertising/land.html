@@ -1,0 +1,25 @@
+{%extends 'HouseAdvertising/main.html'%}
+{%block content%}
+<h1 style='color:white; text-align:center; text-decoration:underline;'> Land </h2>
+    <!--land section-->
+    <div class="container">
+        {%for i in land_data %}
+        <div class="items">
+            <h2> {{i.la_category}}</h2>
+            <img src = "{{i.land_image.url}}" alt= 'loading image' width=300px height=290px; />
+            <div class="details">
+                <h4> <b>location: </b>{{i.la_Location}}</h4>
+                {% if i.la_Price > 0%}
+                    <h4> <b>price: </b>{{i.la_Price}} </h4>
+                {%endif%}
+                <h4>  <b>length: </b>{{i.la_height}} Meters </h4>
+                <h4>  <b>width: </b>{{i.la_width}}  Meters</h4>
+                <h4>  <i>advertising_date:</i> {{i.advertising_date}} </h4>
+                
+                
+            </div>
+            
+            <a href ='/land/{{i.Land_id}}'><button><span> </span>more</button></a>
+        </div>
+    {%endfor%}
+    {%endblock%}

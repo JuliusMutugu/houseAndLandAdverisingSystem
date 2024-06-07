@@ -1,0 +1,16 @@
+{%extends 'HouseAdvertising/main.html'%}
+{%block content%}
+<div class= "full_property">
+    <h1> {{singleProperty.la_Location}}  </h1>
+    <div class = "items">
+    <img src = {{singleProperty.land_image.url}} width = 600px height= 400px/>
+    </div>
+    <div class = "item">
+        <h3> Details </h3> <hr/>
+        <h4> Price: {{singleProperty.la_Price}} </h4>
+        <h4> Category: {{singleProperty.la_category}} </h4>
+        <h4> Width: {{singleProperty.la_width}} Meters</h4>
+        <h4> Length: {{singleProperty.la_height}} Meters</h4>
+        <h4> Posted On : {{singleProperty.advertising_date}} </h4>
+    </div>
+{%endblock%}

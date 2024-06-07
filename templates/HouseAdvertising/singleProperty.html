@@ -1,0 +1,18 @@
+{%extends 'HouseAdvertising/main.html'%}
+{%block content%}
+<div class= "full_property">
+    <h1> {{singleProperty.hs_name}} </h1>
+    <div class = "items">
+    <img src = {{singleProperty.hs_image.url}} width = 600px height= 400px/>
+    </div>
+    <div class = "item">
+        <h3> Details </h3> <hr/>
+        <h4> Price: {{singleProperty.hs_Price}} </h4>
+        <h4> Category: {{singleProperty.hs_Category}} </h4>
+        <h4> BedRooms: {{singleProperty.hs_bed_rooms}} </h4>
+        <h4> Location: {{singleProperty.hs_Location}} </h4>
+        <h4> More: {{singleProperty.hs_others}} </h4>
+        <h4> Phone number {{singleProperty.phoneNumber}} </h4>
+        
+    </div>
+{%endblock%}

@@ -1,0 +1,28 @@
+{%extends 'HouseAdvertising/main.html'%}
+
+{%block content%}
+<form method = "POST" action = "" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type= "text" name = 'username' required /><br/>
+    <label for="password">password</label>
+    <input type= "password" name = 'password' value ={{passcode}} placeholder = {{passcode}}/> 
+    <a href = "">  "auto_password"  </a><br/> 
+    <label for="password" name = "password">confirm password</label>
+    <input type = "text" value= {{passcode}} />
+    
+   
+    <br/>
+    <label for="phone">phone_number</label>
+    <input type= "text" name = 'phone_number' required/><br/>
+    <label for="social_link">social_media_link</label>
+    <input type= "text" name = 'link'/><br/>
+    <label for="id">National id</label>
+    <input type= "int" name = 'national_id' required/><br/>
+    <label for="picture">profile picture</label>
+    <input type= "file"  name = 'agent_image' required /><br/>
+    <input type= "submit"/>
+    <p style='color:white '> Already have an account ?<a href ='{%url "loginPage"%}'> LOG IN </a>
+</form>
+
+{%endblock%}

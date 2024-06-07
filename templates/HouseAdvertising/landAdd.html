@@ -1,0 +1,29 @@
+{%extends "HouseAdvertising/main.html"%}
+
+{%block content%}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2 style="color:red;text-align:center;" >land advertisement Form! </h2>
+    <label for="property_name"> property_name</label>
+    <input type = "text" required name="name" height="200px"/> <br/>
+    <label for="property_type"> property_type</label>
+    <select name="category" id = "category">
+        <option value="landlease" >landlease</option>
+        <option value="landsell" >landsell</option>
+        
+    </select><br/>
+    <label for="property_size"> land_Width </label>
+    <input type = "number" required name="width" height= "50%" width= "300px" placeholder = "in meters squared"/><br/> 
+    <label for="property_size"> land_length </label>
+    <input type = "number" required name="length" height= "50%" width= "300px" placeholder = "in meters squared"/><br/> 
+    <label for="location"> Location</label>
+    <input type="text" required name='location' height="300px"/> <br/>
+    <label for="price"> Price</label>
+    <input type = "number" required name="price"/> <br/>
+    
+    <label for =more> more details </label>
+    <input type = text name="more" placeholder="land description" id = 'more'/><br/>
+    <input type="file" name = "image" required> <br/> <br/>
+    <input type="submit" value = "Submit" height="300px"/>
+</form>
+{%endblock%}

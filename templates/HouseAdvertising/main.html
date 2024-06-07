@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            background-color: rgb(175, 184, 184);
+        }
+          .nav{
+            background-color: rgb(8, 3, 20);
+            padding: 10px;
+            position:relative;
+        }
+        .nav ul{
+            list-style: none;
+            text-align: right;
+        }
+        .nav ul li{
+            display: inline;
+            padding: 10px ;
+            margin: 10px ;
+            bottom: - 5px;
+            left: 0px;
+          
+        }
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            text-transform: capitalize;
+        
+        }
+        .nav ul li:hover{
+          border: none;
+          border-bottom: 2px solid lime;
+          transition: .1s;
+        }
+        input{
+            padding: 6px 10px 7px 10px;
+            background-color: rgb(10, 56, 56);
+            color: white;
+            border-radius: 10px;
+            margin: 10px;
+           
+            
+
+        }
+        input::placeholder{
+            color:rgb(238, 255, 0);
+        }
+        #search{
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+            background-color: none;
+        }
+        .drop {
+            background-color:rgb(2, 2, 14);
+            display:none;
+            position:absolute;
+            width:20%;
+            margin-left: 850px;
+            height:auto;
+            text-align: center;
+
+            
+        }
+        .drop_home{
+            background-color:rgb(2, 2, 14);
+            display:none;
+            position:absolute;
+            width:10%;
+            margin-left: 820px;
+            height:auto;
+            text-align: center;
+
+        }
+        .drop_home ul li{
+            display:block;
+            border-left: 1px solid lime;
+            border-bottom: 1px solid black;
+
+        }
+        .drop_profile{
+            background-color:rgb(2, 2, 14);
+            display:none;
+            position:absolute;
+            width:10%;
+            margin-left:85%;
+            height:auto;
+            text-align: center;
+
+        }
+        .drop_profile ul li{
+            display:block;
+            border-left: 1px solid lime;
+            border-bottom: 1px solid black;
+
+        }
+        .nav ul li:hover .drop_profile{
+            display:block;
+        }
+        .drop ul li{
+            display:block;
+            border-left: 1px solid lime;
+            border-bottom: 1px solid black;
+        }
+        .nav li:hover .drop{
+            display: block;
+        }
+        .nav li:hover .drop_home{
+            display: block;
+        }
+        .container{
+            background-color: rgb(154, 154, 161);
+        }
+        .items {
+            display: inline-block;
+            margin: 20px 40px 20px 40px;
+            border:1px solid white;
+            padding:15px;
+            background-color:white;
+            border-radius: 10px;
+            text-align:center;
+        }
+        .full_property{
+            color:blue;
+        }
+        .full_property h1{
+            color:red;
+            text-transform: underline;
+            text-align:center;
+        }
+        .full_property h3{
+            text-align:center;
+        }
+        .item{
+            display: inline-block;
+            border:1px solid white;
+            padding:35px;
+            background-color:white;
+            border-radius: 10px;
+            width:500px;
+
+        }
+        
+        .items h2{
+            text-transform:capitalize;
+            text-align:center;
+            text-decoration:underline;
+        }
+        .items .details{
+            color:black;
+            text-align:left;
+
+        }
+        button{
+            position:relative;
+            float:right;
+            padding:7px 15px 5px 15px;
+            border-radius:15px;
+            cursor:pointer;
+            color:red;
+            text-transform:capitalize;
+            margin-left:20px;
+            
+          
+        }
+        button span{
+            background:lime;
+            width:0%;
+            position:absolute;
+            border-radius:15px;
+            height:100%;
+            float:right;
+            top:0;
+            left:0;
+            
+           
+          
+        }
+        button:hover span{
+            width: 100%;
+            transition:.5s;
+            
+           
+        }
+        #search{
+            background-color:transparent;
+        }
+        #more{
+            width: 300px;
+            height: 100px;
+            
+
+        }
+        form{
+            background-color: rgb(7, 18, 34);
+            color: black;
+            font-weight: bold;
+            padding:10px;
+            margin-top: 20px;
+            width: 40%;
+            text-align:center;
+            margin-left: 400px;
+            border-radius: 10px;
+            
+        }
+        form label{
+            padding: 4px 15px 5px 15px;
+            margin-left:30px;
+            color: white;
+        }
+      .intro{
+        background-color:blanchedalmond;
+        width:80%;
+        text-align: center;
+        padding:10px;
+        margin-top: 10px;
+        margin-left: 40px;
+        padding: 10px 10px 10% 10px;
+        border-radius: 15px;
+      }
+      .why_us{
+        background-color: rgb(160, 160, 173);
+        width: 85%;
+        padding:10px;
+        margin: 10px;
+        margin-top: 18px;
+        border-radius: 15px;
+        
+      }
+      .why_us h1{
+        color: black;
+        text-align: center;
+      }
+      .why{
+        width: 300px;
+        border-radius: 10px;
+        border:  1px solid rgb(13, 3, 24);
+        background-color: rgb(40, 36, 54);
+        color: white;
+        margin-left: 40px;
+        padding: 10px;
+        display: inline-block;
+      }
+      .contact{
+        background-color: red;
+        text-align: center;
+        color: yellow;
+        width: 95%;
+      }
+
+    </style>
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <form action="" method="post" id ='search'>
+            {%csrf_token%}
+            <input type="search" placeholder="search here" name = "searchValue">
+            <!--input type="submit" value = "submit" /-->
+        </form>
+        <ul>
+            <li><a href="{%url 'landingpage'%}"> home</a>
+                <div class='drop_home'>
+                    <ul>
+                        <li> <a href= "{%url 'homePage'%}"> houses </a> </li>
+                        <li> <a href= "{%url 'landsPage'%}"> Land </a> </li>
+                        
+                    </ul>
+
+                </div>
+
+            </li>
+            <li><a href=""> sell</a>
+                <div class='drop'>
+                    <ul>
+                        <li> <a href= "{%url 'addHouse'%}"> advertise house </a> </li>
+                        <li> <a href= "{%url 'addLand'%}"> advertise Land </a> </li>
+                        <li> <a href= "{%url 'becomeAgent'%}"> become an Agent </a> </li>
+                    </ul>
+
+                </div>
+            
+            </li>
+            <li><a href=""> Review</a></li>
+            <li><a href=""> profile</a>
+                <div class='drop_profile'>
+                    <ul>
+                        <li> <a href= "{%url 'loginPage'%}"> login </a> </li>
+                        
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+{%block content %}
+
+{%endblock%}
+</body>
+</html>

@@ -1,0 +1,7 @@
+this are the features that are yet to be added to the system
+    1. map integration. (embed google maps for directions)
+    2. mpesa integration for viewing fees.
+    3. log in verification.
+    4. contact details for the owner.
+    5. stars to keep track of usage.
+      

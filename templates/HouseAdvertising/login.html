@@ -1,0 +1,17 @@
+{%extends "HouseAdvertising/main.html"%}
+{%block content%}
+
+<form method = 'post', action = ''>
+    {%csrf_token%}
+    <label for = "username"> username </label>
+    <input type= 'text' placeholder= "national_id/ username " name= 'username' required /><br/>
+    <label for = "password"> password </label>
+    <input type = 'password' placeholder = "password" name = 'password' required/><br/>
+    <label for = "checkbox"> remember me </label>
+    <input type = 'checkbox' />    </br> 
+    <input type = "submit" value= "login"/>
+</form>
+<p style='color:blue;font-size:20px; text-align:center; '> Don't have an account ?<a href ='{%url "becomeAgent"%}'> sign up </a>
+
+<h3 style = "color:red;text-align:center; margin-top:10px;"> {{user.message}} </h3>
+{%endblock%}

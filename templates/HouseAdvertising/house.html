@@ -1,0 +1,27 @@
+{%extends 'HouseAdvertising/main.html'%}
+{%block content%}
+<div class="container">
+    {%for i in house_data %}
+    <div class="items">
+        <h2> {{i.hs_name}}</h2>
+        
+        
+        <img src = "{{i.hs_image.url}}" alt= 'loading image' width=300px height=290px; />
+        <div class="details">
+            <h4> <b> Category : </b> {{i.hs_Category}} </h4>
+            <h4> <b>location: </b>{{i.hs_Location}}</h4>
+            {% if i.hs_Price > 0%}
+                <h4> <b>price: </b>{{i.hs_Price}} </h4>
+            {%endif%}
+            <h4>  <b>bedrooms: </b>{{i.hs_bed_rooms}} </h4>
+            <h4> p <i>advertising_date:</i> {{i.hs_advertising_date}} </h4>
+            
+        </div>
+       
+        <a href = "home/{{i.house_id}}"> <button ><span> </span>more</button></a>
+        {{i.agent_id}}
+    </div>
+{%endfor%}
+<hr/>
+
+{%endblock%}
